@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 20px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .section {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+    background-color: #e0e0e0;
+    position: relative;
+  }
+  
+  .section-title {
+    position: absolute;
+    top: 0; /* Updated */
+    right: 0; /* Updated */
+    padding: 5px 10px;
+    border: 1px solid #000;
+    font-weight: bold;
+  }
+  
+  /* Applying section title colors */
+  .section:nth-child(1) .section-title {
+    background-color: #FFACAC; /* Reddish */
+  }
+  
+  .section:nth-child(2) .section-title {
+    background-color: #C84444; /* Dark Red */
+  }
+  
+  .section:nth-child(3) .section-title {
+    background-color: #E8D49C; /* Light Brown */
+  }
+  
+  p {
+    padding: 15px;
+    margin-top: 40px; /* Added margin-top to push down the body content */
+  }
+  
+  @media screen and (min-width: 992px) {
+    .section {
+      width: calc(33.33% - 20px);
+      margin-right: 20px;
+    }
+    .section:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    .section {
+      width: calc(50% - 20px);
+      margin-right: 20px;
+      margin-bottom: 20px;
+    }
+    .section:nth-child(2n) {
+      margin-right: 0;
+    }
+    .section:nth-child(3n) {
+      width: calc(100% - 20px);
+      margin-right: 0;
+    }
+    p {
+      margin-top: 40px; /* Added margin-top to push down the body content */
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .section {
+      width: calc(100% - 20px);
+      margin-right: 20px;
+    }
+    .section:last-child {
+      margin-right: 0;
+    }
+    p {
+      margin-top: 40px; /* Added margin-top to push down the body content */
+    }
+  }  
